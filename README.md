@@ -50,20 +50,20 @@ No dependency & Cross-platform. You can use it anywhere (Node.js, Deno, Bun), ev
 
 ```bash
 # npm
-npm install promptparse-mod
+npm install @korarit/promptparse-mod
 # หรือติดตั้งตรงจาก GitHub:
 npm install github:korarit/promptparse-mod
 
 # pnpm
-pnpm add promptparse-mod
+pnpm add @korarit/promptparse-mod
 # หรือติดตั้งตรงจาก GitHub:
 pnpm add github:korarit/promptparse-mod
 
 # yarn
-yarn add promptparse-mod
+yarn add @korarit/promptparse-mod
 
 # bun
-bun add promptparse-mod
+bun add @korarit/promptparse-mod
 ```
 
 ---
@@ -71,10 +71,10 @@ bun add promptparse-mod
 ## Quick Start
 
 ```ts
-import { generate, parse, validate } from 'promptparse-mod'
+import { generate, parse, validate } from '@korarit/promptparse-mod'
 // or import specific modules:
-// import { billPayment, anyId } from 'promptparse-mod/generate'
-// import { billPayment as validateBillPayment } from 'promptparse-mod/validate'
+// import { billPayment, anyId } from '@korarit/promptparse-mod/generate'
+// import { billPayment as validateBillPayment } from '@korarit/promptparse-mod/validate'
 ```
 
 ---
@@ -86,7 +86,7 @@ import { generate, parse, validate } from 'promptparse-mod'
 ใช้สำหรับโอนเงินพร้อมเพย์รายย่อยทั่วไป (Credit Transfer) ผ่านเบอร์มือถือ, เลขบัตรประชาชน, หรือ e-Wallet ID
 
 ```ts
-import { generate } from 'promptparse-mod'
+import { generate } from '@korarit/promptparse-mod'
 
 // โอนเงินผ่านเบอร์โทรศัพท์ (Mobile Number)
 const mobileQr = generate.anyId({
@@ -138,7 +138,7 @@ interface BillPaymentConfig {
 #### Standard Bill Payment (Static QR)
 
 ```ts
-import { generate } from 'promptparse-mod'
+import { generate } from '@korarit/promptparse-mod'
 
 const payload = generate.billPayment({
   billerId: '010753700088201',
@@ -180,7 +180,7 @@ const paotungPayload = generate.billPayment({
 สร้าง Mini-QR ที่ฝังอยู่ในสลิปการโอนเงิน เพื่อให้ระบบภายนอกหรือธนาคารสามารถตรวจสอบสลิปย้อนหลังได้
 
 ```ts
-import { generate } from 'promptparse-mod'
+import { generate } from '@korarit/promptparse-mod'
 
 const miniQr = generate.slipVerify({
   sendingBank: '014', // รหัสธนาคารต้นทาง เช่น 014 (SCB), 002 (BBL), 004 (KBANK)
@@ -195,7 +195,7 @@ const miniQr = generate.slipVerify({
 สร้าง QR Code สำหรับรับเงินเข้ากระเป๋า TrueMoney Wallet
 
 ```ts
-import { generate } from 'promptparse-mod'
+import { generate } from '@korarit/promptparse-mod'
 
 const truemoneyQr = generate.trueMoney({
   mobileNo: '0812345678',
@@ -211,7 +211,7 @@ const truemoneyQr = generate.trueMoney({
 สร้างและแปลง Barcode ตามมาตรฐานของธนาคารแห่งประเทศไทย (BOT Barcode)
 
 ```ts
-import { generate, parseBarcode } from 'promptparse-mod'
+import { generate, parseBarcode } from '@korarit/promptparse-mod'
 
 // 1. สร้าง BOT Barcode String
 const barcodeString = generate.botBarcode({
@@ -239,7 +239,7 @@ if (botBarcode) {
 ใช้ฟังก์ชัน `parse()` เพื่อแกะโครงสร้าง Tag ต่าง ๆ ของ QR Code ตามมาตรฐาน EMVCo:
 
 ```ts
-import { parse } from 'promptparse-mod'
+import { parse } from '@korarit/promptparse-mod'
 
 // ตัวอย่าง Payload
 const qr = parse(
@@ -272,7 +272,7 @@ const strictQr = parse(payload, true)
 ประกอบ Tag และคำนวณ Checksum CRC-16 (XMODEM) ด้วยตนเอง:
 
 ```ts
-import { encode, tag, withCrcTag, checksum } from 'promptparse-mod'
+import { encode, tag, withCrcTag, checksum } from '@korarit/promptparse-mod'
 
 const tags = [
   tag('00', '01'),
@@ -297,7 +297,7 @@ const crc = checksum('000201010211...')
 ### Validate Bill Payment
 
 ```ts
-import { validate } from 'promptparse-mod'
+import { validate } from '@korarit/promptparse-mod'
 
 const result = validate.billPayment(qrPayload)
 
@@ -343,7 +343,7 @@ if (result) {
 สามารถใช้งานบน Browser ผ่าน CDN ได้ทันทีโดยไม่ต้อง Bundler:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/promptparse-mod"></script>
+<script src="https://cdn.jsdelivr.net/npm/@korarit/promptparse-mod"></script>
 
 <script>
   // เข้าถึงผ่าน global object `promptparse`
