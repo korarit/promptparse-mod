@@ -1,7 +1,7 @@
 {
-  "name": "promptparse",
+  "name": "promptparse-mod",
   "version": "1.6.0",
-  "description": "All-in-one JS library for PromptPay & EMVCo QR Codes",
+  "description": "All-in-one JS library for PromptPay & EMVCo QR Codes (MOD)",
   "author": "Maythiwat Chomchuen <maythiwat.chom@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -17,7 +17,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/maythiwat/promptparse.git"
+    "url": "https://github.com/korarit/promptparse-mod.git"
   },
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
