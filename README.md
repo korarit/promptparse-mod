@@ -1,6 +1,10 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="PromptParse-MOD Banner" width="100%">
+</p>
+
 # PromptParse-MOD
 
-"All-in-one JS library for PromptPay & EMVCo QR Codes with extended Tag 59 (Merchant Name), Dynamic QR, and UTF-8 Checksum support"
+> All-in-one JS/TS library for PromptPay &amp; EMVCo QR Codes with extended Tag 59 (Thai UTF-8 Merchant Name), Dynamic QR (Tag 01), and Slip Verification support.
 
 Repository: [https://github.com/korarit/promptparse-mod](https://github.com/korarit/promptparse-mod)
 
