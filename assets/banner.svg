@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 490" width="1200" height="490" fill="none">
   <defs>
     <!-- Background Gradients -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -9,7 +9,7 @@
 
     <!-- Radial Glows -->
     <radialGradient id="glowCyan" cx="15%" cy="20%" r="45%">
-      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.18" />
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.20" />
       <stop offset="100%" stop-color="#00f2fe" stop-opacity="0" />
     </radialGradient>
 
@@ -18,50 +18,49 @@
       <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
     </radialGradient>
 
-    <radialGradient id="glowBlue" cx="60%" cy="80%" r="40%">
-      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.15" />
+    <radialGradient id="glowBlue" cx="55%" cy="85%" r="42%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.16" />
       <stop offset="100%" stop-color="#3b82f6" stop-opacity="0" />
     </radialGradient>
 
-    <!-- Text & Element Gradients -->
+    <!-- Title Gradient -->
     <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="45%" stop-color="#818cf8" />
       <stop offset="100%" stop-color="#c084fc" />
     </linearGradient>
 
+    <!-- Badge Gradient -->
     <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.2" />
-      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.2" />
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.25" />
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.25" />
     </linearGradient>
 
+    <!-- Card Background Gradient -->
     <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#111827" stop-opacity="0.85" />
-      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.75" />
+      <stop offset="0%" stop-color="#111827" stop-opacity="0.90" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.82" />
     </linearGradient>
 
+    <!-- Card Border Gradient -->
     <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.5" />
-      <stop offset="40%" stop-color="#818cf8" stop-opacity="0.2" />
-      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.4" />
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.55" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.45" />
     </linearGradient>
 
-    <linearGradient id="qrGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="100%" stop-color="#818cf8" />
-    </linearGradient>
-
-    <!-- Grid Pattern -->
+    <!-- Tech Grid Pattern -->
     <pattern id="gridPattern" width="36" height="36" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.2" fill="#38bdf8" fill-opacity="0.12" />
-      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.4" />
+      <circle cx="2" cy="2" r="1.2" fill="#38bdf8" fill-opacity="0.13" />
+      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.38" />
     </pattern>
 
-    <!-- Drop Shadows / Glows -->
+    <!-- Drop Shadows and Glow Filters -->
     <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.6" />
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.65" />
     </filter>
-    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="4" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
@@ -70,32 +69,31 @@
   <style>
     .font-mono { font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', 'JetBrains Mono', Consolas, monospace; }
     .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Helvetica, Arial, sans-serif; }
-    .tag-text { font-size: 11.5px; font-weight: 600; letter-spacing: 0.3px; }
   </style>
 
   <!-- Background Layer -->
-  <rect width="1200" height="480" fill="url(#bgGrad)" />
-  <rect width="1200" height="480" fill="url(#glowCyan)" />
-  <rect width="1200" height="480" fill="url(#glowPurple)" />
-  <rect width="1200" height="480" fill="url(#glowBlue)" />
-  <rect width="1200" height="480" fill="url(#gridPattern)" opacity="0.8" />
+  <rect width="1200" height="490" fill="url(#bgGrad)" />
+  <rect width="1200" height="490" fill="url(#glowCyan)" />
+  <rect width="1200" height="490" fill="url(#glowPurple)" />
+  <rect width="1200" height="490" fill="url(#glowBlue)" />
+  <rect width="1200" height="490" fill="url(#gridPattern)" opacity="0.85" />
 
-  <!-- Abstract Decorative Circuit / Wire Vectors -->
-  <g opacity="0.25">
-    <path d="M 0 160 Q 200 160 300 240 T 600 220" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="6 6" fill="none" />
-    <path d="M 700 80 Q 900 120 1000 60 T 1200 120" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="4 8" fill="none" />
-    <circle cx="300" cy="240" r="3" fill="#38bdf8" />
-    <circle cx="600" cy="220" r="4" fill="#818cf8" />
-    <circle cx="1000" cy="60" r="3" fill="#c084fc" />
+  <!-- Decorative High-Tech Circuit Vectors -->
+  <g opacity="0.22">
+    <path d="M 0 150 Q 180 150 280 230 T 580 210" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="6 6" fill="none" />
+    <path d="M 680 70 Q 880 110 980 50 T 1200 110" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="4 8" fill="none" />
+    <circle cx="280" cy="230" r="3.5" fill="#38bdf8" />
+    <circle cx="580" cy="210" r="4" fill="#818cf8" />
+    <circle cx="980" cy="50" r="3.5" fill="#c084fc" />
   </g>
 
-  <!-- ==================== LEFT COLUMN: BRANDING & FEATURES ==================== -->
-  <g transform="translate(64, 52)">
+  <!-- ==================== LEFT COLUMN: BRANDING AND ALL-FORMAT COVERAGE ==================== -->
+  <g transform="translate(60, 46)">
     <!-- Top Pill Badge -->
     <g>
-      <rect x="0" y="0" width="375" height="30" rx="15" fill="url(#badgeGrad)" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4" />
+      <rect x="0" y="0" width="410" height="30" rx="15" fill="url(#badgeGrad)" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.45" />
       <circle cx="16" cy="15" r="4" fill="#00f2fe" filter="url(#neonGlow)" />
-      <text x="30" y="19" class="font-mono tag-text" fill="#7dd3fc">PROMPTPAY &amp; EMVCo QR ENGINE v1.6.0</text>
+      <text x="30" y="19" class="font-mono" font-size="11.5" font-weight="700" fill="#7dd3fc" letter-spacing="0.3px">UNIVERSAL THAI QR &amp; EMVCo SUITE • v1.6.0</text>
     </g>
 
     <!-- Main Title -->
@@ -103,185 +101,196 @@
       PromptParse<tspan fill="#38bdf8">-</tspan><tspan fill="#00f2fe">MOD</tspan>
     </text>
 
-    <!-- Tagline -->
-    <text x="0" y="124" class="font-sans" font-size="19" font-weight="600" fill="#f1f5f9" letter-spacing="-0.2px">
-      All-in-One Engine for Thai QR, AnyID &amp; EMVCo Standards
+    <!-- Tagline: Emphasizing Universal All-Format Support (English) -->
+    <text x="0" y="123" class="font-sans" font-size="18.5" font-weight="700" fill="#f1f5f9" letter-spacing="-0.2px">
+      Universal Engine for Thai QR, AnyID, Bill Payment &amp; Slips
     </text>
 
     <!-- Description -->
-    <text x="0" y="156" class="font-sans" font-size="14" font-weight="400" fill="#94a3b8" letter-spacing="0.1px">
-      Generate &amp; parse payloads with full support for <tspan fill="#38bdf8" font-weight="600">Tag 59 Thai UTF-8</tspan>,
+    <text x="0" y="153" class="font-sans" font-size="13.5" font-weight="400" fill="#94a3b8">
+      All-in-one engine for parsing, generating &amp; validating all EMVCo payloads:
     </text>
-    <text x="0" y="178" class="font-sans" font-size="14" font-weight="400" fill="#94a3b8" letter-spacing="0.1px">
-      Dynamic initiation flags, Bill Payment, TrueMoney, and Slip Verify Mini-QR.
+    <text x="0" y="173" class="font-sans" font-size="13.5" font-weight="400" fill="#cbd5e1">
+      <tspan fill="#38bdf8" font-weight="600">AnyID</tspan>, <tspan fill="#818cf8" font-weight="600">Bill Payment</tspan>, <tspan fill="#c084fc" font-weight="600">TrueMoney</tspan>, <tspan fill="#34d399" font-weight="600">Slip Verify</tspan>, <tspan fill="#fbbf24" font-weight="600">BOT Barcode</tspan> &amp; <tspan fill="#f43f5e" font-weight="600">Dynamic QR</tspan>
     </text>
 
-    <!-- Feature Pills Grid -->
-    <g transform="translate(0, 204)">
-      <!-- Pill 1: Tag 59 UTF-8 -->
+    <!-- Complete Format Pills: 2 Rows x 3 Badges (All Types Covered) -->
+    <g transform="translate(0, 196)">
+      <!-- Row 1: Core Formats -->
+      <!-- AnyID Tag 29 -->
       <g transform="translate(0, 0)">
-        <rect width="168" height="30" rx="8" fill="#1e293b" fill-opacity="0.7" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.3" />
-        <text x="12" y="19" class="font-mono" font-size="12" font-weight="600" fill="#38bdf8">✦ Tag 59 (Thai UTF-8)</text>
+        <rect width="152" height="29" rx="7" fill="#1e293b" fill-opacity="0.8" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.35" />
+        <text x="10" y="18" class="font-mono" font-size="11" font-weight="700" fill="#38bdf8">✓ AnyID (Tag 29)</text>
       </g>
-      <!-- Pill 2: Dynamic QR -->
-      <g transform="translate(176, 0)">
-        <rect width="146" height="30" rx="8" fill="#1e293b" fill-opacity="0.7" stroke="#818cf8" stroke-width="1" stroke-opacity="0.3" />
-        <text x="12" y="19" class="font-mono" font-size="12" font-weight="600" fill="#a5b4fc">✦ Dynamic QR (01)</text>
+      <!-- Bill Payment Tag 30 -->
+      <g transform="translate(160, 0)">
+        <rect width="166" height="29" rx="7" fill="#1e293b" fill-opacity="0.8" stroke="#818cf8" stroke-width="1" stroke-opacity="0.35" />
+        <text x="10" y="18" class="font-mono" font-size="11" font-weight="700" fill="#a5b4fc">✓ Bill Pay (Tag 30)</text>
       </g>
-      <!-- Pill 3: Slip Verify -->
-      <g transform="translate(330, 0)">
-        <rect width="144" height="30" rx="8" fill="#1e293b" fill-opacity="0.7" stroke="#c084fc" stroke-width="1" stroke-opacity="0.3" />
-        <text x="12" y="19" class="font-mono" font-size="12" font-weight="600" fill="#d8b4fe">✦ Slip Verify QR</text>
+      <!-- Slip Verify Mini-QR -->
+      <g transform="translate(334, 0)">
+        <rect width="150" height="29" rx="7" fill="#1e293b" fill-opacity="0.8" stroke="#34d399" stroke-width="1" stroke-opacity="0.35" />
+        <text x="10" y="18" class="font-mono" font-size="11" font-weight="700" fill="#6ee7b7">✓ Slip Verify Mini-QR</text>
       </g>
 
-      <!-- Row 2 Pills -->
-      <!-- Pill 4: Zero Dependencies -->
-      <g transform="translate(0, 38)">
-        <rect width="154" height="30" rx="8" fill="#1e293b" fill-opacity="0.7" stroke="#34d399" stroke-width="1" stroke-opacity="0.3" />
-        <text x="12" y="19" class="font-mono" font-size="12" font-weight="600" fill="#6ee7b7">✓ 0 Dependencies</text>
+      <!-- Row 2: Extended Formats and Features -->
+      <!-- TrueMoney & BOT Barcode -->
+      <g transform="translate(0, 37)">
+        <rect width="152" height="29" rx="7" fill="#1e293b" fill-opacity="0.8" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.35" />
+        <text x="10" y="18" class="font-mono" font-size="11" font-weight="700" fill="#fcd34d">✓ TrueMoney &amp; BOT</text>
       </g>
-      <!-- Pill 5: CRC16 Validated -->
-      <g transform="translate(162, 38)">
-        <rect width="154" height="30" rx="8" fill="#1e293b" fill-opacity="0.7" stroke="#fbbf24" stroke-width="1" stroke-opacity="0.3" />
-        <text x="12" y="19" class="font-mono" font-size="12" font-weight="600" fill="#fde68a">🛡️ CRC16 Checksum</text>
+      <!-- Tag 59 Thai UTF-8 -->
+      <g transform="translate(160, 37)">
+        <rect width="166" height="29" rx="7" fill="#1e293b" fill-opacity="0.8" stroke="#ec4899" stroke-width="1" stroke-opacity="0.35" />
+        <text x="10" y="18" class="font-mono" font-size="11" font-weight="700" fill="#f472b6">✓ Thai UTF-8 (Tag 59)</text>
       </g>
-      <!-- Pill 6: Cross-Platform -->
-      <g transform="translate(324, 38)">
-        <rect width="150" height="30" rx="8" fill="#1e293b" fill-opacity="0.7" stroke="#f472b6" stroke-width="1" stroke-opacity="0.3" />
-        <text x="12" y="19" class="font-mono" font-size="12" font-weight="600" fill="#fbcfe8">⚡ Node • Bun • Deno</text>
+      <!-- Dynamic QR & CRC16 -->
+      <g transform="translate(334, 37)">
+        <rect width="150" height="29" rx="7" fill="#1e293b" fill-opacity="0.8" stroke="#c084fc" stroke-width="1" stroke-opacity="0.35" />
+        <text x="10" y="18" class="font-mono" font-size="11" font-weight="700" fill="#d8b4fe">✓ Dynamic QR (01)</text>
       </g>
     </g>
 
-    <!-- Installation Terminal Command -->
-    <g transform="translate(0, 296)">
-      <rect width="474" height="46" rx="10" fill="#090d16" stroke="#1e293b" stroke-width="1.2" />
+    <!-- Installation and Universal Specs Banner -->
+    <g transform="translate(0, 292)">
+      <!-- Terminal Command Box -->
+      <rect width="484" height="46" rx="10" fill="#090d16" stroke="#1e293b" stroke-width="1.2" />
       <text x="18" y="28" class="font-mono" font-size="14" font-weight="700" fill="#38bdf8">$</text>
       <text x="36" y="28" class="font-mono" font-size="13.5" font-weight="500" fill="#e2e8f0">npm i <tspan fill="#38bdf8" font-weight="700">@korarit/promptparse-mod</tspan></text>
       
-      <!-- Quick Copy Icon decoration -->
-      <g transform="translate(436, 15)" opacity="0.6">
-        <rect x="0" y="3" width="12" height="12" rx="2" fill="none" stroke="#94a3b8" stroke-width="1.5" />
-        <path d="M 3 3 L 3 0 L 15 0 L 15 12 L 12 12" fill="none" stroke="#94a3b8" stroke-width="1.5" />
+      <!-- Tech specs badges below terminal with increased padding-top -->
+      <g transform="translate(0, 68)">
+        <text class="font-mono" font-size="11.5" font-weight="600" fill="#64748b">
+          <tspan fill="#34d399">● Zero Dependencies</tspan> &#160;•&#160; 
+          <tspan fill="#94a3b8">Node.js</tspan> &#160;•&#160; 
+          <tspan fill="#94a3b8">Bun</tspan> &#160;•&#160; 
+          <tspan fill="#94a3b8">Deno</tspan> &#160;•&#160; 
+          <tspan fill="#94a3b8">Browser</tspan>
+        </text>
       </g>
     </g>
   </g>
 
-  <!-- ==================== RIGHT COLUMN: CODE & QR CODE INTERACTIVE CARD ==================== -->
+  <!-- ==================== RIGHT COLUMN: FULL-SPECTRUM DEMO CARD ==================== -->
   <g transform="translate(585, 42)" filter="url(#softShadow)">
     <!-- Glassmorphic Window Container -->
-    <rect width="550" height="396" rx="18" fill="url(#cardGrad)" stroke="url(#cardBorder)" stroke-width="1.2" />
+    <rect width="555" height="404" rx="18" fill="url(#cardGrad)" stroke="url(#cardBorder)" stroke-width="1.2" />
     
     <!-- Window Header -->
-    <rect width="550" height="42" rx="18" fill="#0f172a" fill-opacity="0.6" />
-    <!-- Rounded top clip fix -->
-    <path d="M 0 18 Q 0 0 18 0 L 532 0 Q 550 0 550 18 L 550 42 L 0 42 Z" fill="#0f172a" fill-opacity="0.7" />
+    <path d="M 0 18 Q 0 0 18 0 L 537 0 Q 555 0 555 18 L 555 42 L 0 42 Z" fill="#0f172a" fill-opacity="0.75" />
     
     <!-- Window Controls -->
     <circle cx="22" cy="21" r="5.5" fill="#ef4444" opacity="0.85" />
     <circle cx="38" cy="21" r="5.5" fill="#f59e0b" opacity="0.85" />
     <circle cx="54" cy="21" r="5.5" fill="#10b981" opacity="0.85" />
     
-    <text x="76" y="26" class="font-mono" font-size="12" fill="#64748b">promptpay-tag30-demo.ts</text>
+    <text x="76" y="26" class="font-mono" font-size="11.5" fill="#64748b">all-formats-demo.ts</text>
     
     <!-- Active Status Indicator -->
-    <g transform="translate(436, 12)">
-      <rect width="98" height="18" rx="9" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="0.8" stroke-opacity="0.4" />
+    <g transform="translate(422, 12)">
+      <rect width="118" height="18" rx="9" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="0.8" stroke-opacity="0.4" />
       <circle cx="10" cy="9" r="3" fill="#10b981" />
-      <text x="18" y="13" class="font-mono" font-size="9.5" font-weight="600" fill="#6ee7b7">EMVCo VALID</text>
+      <text x="18" y="13" class="font-mono" font-size="9" font-weight="700" fill="#6ee7b7">ALL FORMATS READY</text>
     </g>
 
-    <!-- Code Block -->
-    <g transform="translate(22, 60)" class="font-mono" font-size="11.8">
-      <text y="14" fill="#94a3b8"><tspan fill="#c084fc">import</tspan> { generate } <tspan fill="#c084fc">from</tspan> <tspan fill="#38bdf8">'@korarit/promptparse-mod'</tspan></text>
+    <!-- Multi-format Code Preview -->
+    <g transform="translate(22, 54)" class="font-mono" font-size="10.8">
+      <text y="14" fill="#94a3b8"><tspan fill="#c084fc">import</tspan> { <tspan fill="#38bdf8">generate</tspan>, <tspan fill="#38bdf8">validate</tspan> } <tspan fill="#c084fc">from</tspan> <tspan fill="#38bdf8">'@korarit/promptparse-mod'</tspan></text>
       
-      <text y="38" fill="#94a3b8"><tspan fill="#818cf8">const</tspan> payload = generate.billPayment({</text>
-      <text y="58" fill="#cbd5e1">  billerId: <tspan fill="#38bdf8">'010555912345600'</tspan>,</text>
-      <text y="76" fill="#cbd5e1">  amount: <tspan fill="#fbbf24">1250.00</tspan>,</text>
-      <text y="94" fill="#cbd5e1">  merchantName: <tspan fill="#34d399">'บริษัท พร้อมเพย์ จำกัด'</tspan>, <tspan fill="#64748b">// Tag 59 (Thai UTF-8)</tspan></text>
-      <text y="112" fill="#cbd5e1">  ref1: <tspan fill="#38bdf8">'INV-2026-889'</tspan>,</text>
-      <text y="130" fill="#cbd5e1">  ref2: <tspan fill="#38bdf8">'CUST-007'</tspan>,</text>
-      <text y="148" fill="#cbd5e1">  dynamic: <tspan fill="#f43f5e">true</tspan> <tspan fill="#64748b">// Dynamic QR Tag 01</tspan></text>
-      <text y="166" fill="#94a3b8">})</text>
+      <!-- 1. AnyID -->
+      <text y="33" fill="#64748b"><tspan fill="#38bdf8">// 1. PromptPay AnyID (Tag 29)</tspan></text>
+      <text y="48" fill="#cbd5e1"><tspan fill="#818cf8">const</tspan> qr1 = generate.anyId({ type: <tspan fill="#38bdf8">'MSISDN'</tspan>, target: <tspan fill="#38bdf8">'0812345678'</tspan>, amount: <tspan fill="#fbbf24">500</tspan> })</text>
+
+      <!-- 2. Bill Payment with Tag 59 and Dynamic (Wrapped) -->
+      <text y="68" fill="#64748b"><tspan fill="#a5b4fc">// 2. Bill Payment (Tag 30) + Thai UTF-8 &amp; Dynamic</tspan></text>
+      <text y="83" fill="#cbd5e1"><tspan fill="#818cf8">const</tspan> qr2 = generate.billPayment({</text>
+      <text y="98" fill="#cbd5e1">  billerId: <tspan fill="#38bdf8">'010555912345600'</tspan>, amount: <tspan fill="#fbbf24">1250.00</tspan>,</text>
+      <text y="113" fill="#cbd5e1">  merchantName: <tspan fill="#34d399">'ร้านค้าใจดี'</tspan>, dynamic: <tspan fill="#f43f5e">true</tspan></text>
+      <text y="128" fill="#cbd5e1">})</text>
+
+      <!-- 3. Slip Verify & Validate -->
+      <text y="148" fill="#64748b"><tspan fill="#6ee7b7">// 3. Slip Verify Mini-QR &amp; Validation</tspan></text>
+      <text y="163" fill="#cbd5e1"><tspan fill="#818cf8">const</tspan> qr3 = generate.slipVerify({ sendingBank: <tspan fill="#38bdf8">'014'</tspan>, transRef: <tspan fill="#38bdf8">'20260905...'</tspan> })</text>
+      <text y="179" fill="#cbd5e1"><tspan fill="#818cf8">const</tspan> isValid = validate(qr2) <tspan fill="#64748b">// true (CRC16 validated)</tspan></text>
     </g>
 
-    <!-- Lower Section: QR Visualization & Output Payload Box -->
-    <g transform="translate(22, 240)">
-      <!-- Mini Output Container -->
-      <rect width="506" height="136" rx="12" fill="#090d16" fill-opacity="0.9" stroke="#1e293b" stroke-width="1" />
+    <!-- Lower Section: QR Visualization and All Supported Formats Radar -->
+    <g transform="translate(22, 256)">
+      <rect width="511" height="130" rx="12" fill="#090d16" fill-opacity="0.92" stroke="#1e293b" stroke-width="1" />
 
       <!-- Left Sub-card: Interactive QR Vector Representation -->
-      <g transform="translate(14, 14)">
-        <!-- QR Code Canvas Base -->
-        <rect width="108" height="108" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.4" />
+      <g transform="translate(14, 12)">
+        <rect width="106" height="106" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.4" />
 
         <!-- Position Detection Pattern 1: Top-Left -->
-        <rect x="8" y="8" width="28" height="28" rx="4" fill="none" stroke="#38bdf8" stroke-width="2.5" />
-        <rect x="14" y="14" width="16" height="16" rx="2" fill="#38bdf8" />
+        <rect x="8" y="8" width="26" height="26" rx="4" fill="none" stroke="#38bdf8" stroke-width="2.5" />
+        <rect x="13" y="13" width="16" height="16" rx="2" fill="#38bdf8" />
 
         <!-- Position Detection Pattern 2: Top-Right -->
-        <rect x="72" y="8" width="28" height="28" rx="4" fill="none" stroke="#38bdf8" stroke-width="2.5" />
-        <rect x="78" y="14" width="16" height="16" rx="2" fill="#38bdf8" />
+        <rect x="72" y="8" width="26" height="26" rx="4" fill="none" stroke="#38bdf8" stroke-width="2.5" />
+        <rect x="77" y="13" width="16" height="16" rx="2" fill="#38bdf8" />
 
         <!-- Position Detection Pattern 3: Bottom-Left -->
-        <rect x="8" y="72" width="28" height="28" rx="4" fill="none" stroke="#38bdf8" stroke-width="2.5" />
-        <rect x="14" y="78" width="16" height="16" rx="2" fill="#38bdf8" />
+        <rect x="8" y="72" width="26" height="26" rx="4" fill="none" stroke="#38bdf8" stroke-width="2.5" />
+        <rect x="13" y="77" width="16" height="16" rx="2" fill="#38bdf8" />
 
-        <!-- Stylized QR Matrix Dots (Mock Thai PromptPay Matrix) -->
+        <!-- Matrix Pattern -->
         <g fill="#38bdf8" opacity="0.85">
-          <rect x="42" y="10" width="5" height="5" rx="1" />
-          <rect x="52" y="10" width="10" height="5" rx="1" />
-          <rect x="42" y="20" width="8" height="5" rx="1" />
-          <rect x="56" y="20" width="6" height="5" rx="1" />
-          <rect x="44" y="30" width="20" height="4" rx="1" />
+          <rect x="40" y="10" width="5" height="5" rx="1" />
+          <rect x="50" y="10" width="10" height="5" rx="1" />
+          <rect x="40" y="20" width="8" height="5" rx="1" />
+          <rect x="54" y="20" width="6" height="5" rx="1" />
+          <rect x="42" y="30" width="20" height="4" rx="1" />
 
           <!-- Center Alignment Pattern -->
-          <rect x="46" y="46" width="16" height="16" rx="2" fill="none" stroke="#818cf8" stroke-width="2" />
-          <rect x="51" y="51" width="6" height="6" rx="1" fill="#818cf8" />
+          <rect x="45" y="45" width="16" height="16" rx="2" fill="none" stroke="#818cf8" stroke-width="2" />
+          <rect x="50" y="50" width="6" height="6" rx="1" fill="#818cf8" />
 
           <rect x="10" y="44" width="24" height="4" rx="1" />
           <rect x="12" y="54" width="6" height="8" rx="1" />
           <rect x="24" y="52" width="8" height="10" rx="1" />
 
-          <rect x="74" y="44" width="24" height="5" rx="1" />
-          <rect x="82" y="56" width="12" height="5" rx="1" />
+          <rect x="74" y="44" width="22" height="5" rx="1" />
+          <rect x="80" y="56" width="12" height="5" rx="1" />
 
-          <rect x="42" y="70" width="8" height="12" rx="1" />
-          <rect x="54" y="68" width="14" height="6" rx="1" />
-          <rect x="52" y="80" width="16" height="8" rx="1" />
+          <rect x="40" y="68" width="8" height="12" rx="1" />
+          <rect x="52" y="68" width="14" height="6" rx="1" />
+          <rect x="50" y="78" width="16" height="8" rx="1" />
 
-          <rect x="42" y="94" width="12" height="5" rx="1" />
-          <rect x="60" y="92" width="40" height="6" rx="1" />
-          <rect x="74" y="76" width="26" height="8" rx="1" />
+          <rect x="40" y="92" width="12" height="5" rx="1" />
+          <rect x="58" y="90" width="38" height="6" rx="1" />
+          <rect x="72" y="76" width="26" height="8" rx="1" />
         </g>
 
-        <!-- Futuristic Scan Beam Animation Effect (Static Vector Gradient) -->
-        <line x1="6" y1="52" x2="102" y2="52" stroke="#00f2fe" stroke-width="2" opacity="0.8" filter="url(#neonGlow)" />
+        <!-- Laser Scanline -->
+        <line x1="6" y1="53" x2="100" y2="53" stroke="#00f2fe" stroke-width="2" opacity="0.85" filter="url(#neonGlow)" />
       </g>
 
-      <!-- Right Sub-card: Payload Stream & Badges -->
-      <g transform="translate(136, 16)">
-        <text x="0" y="12" class="font-mono" font-size="11" font-weight="700" fill="#38bdf8">EMVCo TLV OUTPUT STREAM</text>
-        
-        <!-- Payload snippet box -->
-        <g transform="translate(0, 20)">
-          <rect width="356" height="46" rx="6" fill="#030712" stroke="#1e293b" stroke-width="1" />
-          <text x="10" y="18" class="font-mono" font-size="10.5" fill="#64748b">000201<tspan fill="#f43f5e">010212</tspan>30670016A000000677010112</text>
-          <text x="10" y="34" class="font-mono" font-size="10.5" fill="#64748b">0115010555912345600<tspan fill="#34d399">5924...</tspan>6304<tspan fill="#38bdf8" font-weight="700">D78F</tspan></text>
+      <!-- Right Sub-card: Complete Supported Formats Checklist Grid -->
+      <g transform="translate(136, 12)">
+        <text x="0" y="12" class="font-mono" font-size="11" font-weight="700" fill="#38bdf8">SUPPORTED SPECIFICATIONS (ALL-IN-ONE)</text>
+
+        <!-- 2-column checklist matrix -->
+        <!-- Column 1 -->
+        <g transform="translate(0, 24)">
+          <text y="12" class="font-mono" font-size="10" fill="#cbd5e1"><tspan fill="#34d399">✔</tspan> PromptPay AnyID (Tag 29)</text>
+          <text y="28" class="font-mono" font-size="10" fill="#cbd5e1"><tspan fill="#34d399">✔</tspan> Bill Payment (Tag 30)</text>
+          <text y="44" class="font-mono" font-size="10" fill="#cbd5e1"><tspan fill="#34d399">✔</tspan> Slip Verify Mini-QR</text>
+          <text y="60" class="font-mono" font-size="10" fill="#cbd5e1"><tspan fill="#34d399">✔</tspan> TrueMoney Wallet QR</text>
         </g>
 
-        <!-- Status Badges Below -->
-        <g transform="translate(0, 78)">
-          <!-- Tag 59 Status -->
-          <rect width="112" height="20" rx="6" fill="#34d399" fill-opacity="0.12" stroke="#34d399" stroke-width="0.8" stroke-opacity="0.4" />
-          <text x="8" y="14" class="font-mono" font-size="9.5" font-weight="600" fill="#34d399">Tag 59: UTF-8 OK</text>
+        <!-- Column 2 -->
+        <g transform="translate(180, 24)">
+          <text y="12" class="font-mono" font-size="10" fill="#cbd5e1"><tspan fill="#34d399">✔</tspan> Thai UTF-8 (Tag 59)</text>
+          <text y="28" class="font-mono" font-size="10" fill="#cbd5e1"><tspan fill="#34d399">✔</tspan> Dynamic / Static (Tag 01)</text>
+          <text y="44" class="font-mono" font-size="10" fill="#cbd5e1"><tspan fill="#34d399">✔</tspan> BOT Barcode Converter</text>
+          <text y="60" class="font-mono" font-size="10" fill="#cbd5e1"><tspan fill="#34d399">✔</tspan> Strict CRC16 Checksum</text>
+        </g>
 
-          <!-- Dynamic Status -->
-          <rect x="120" width="105" height="20" rx="6" fill="#f43f5e" fill-opacity="0.12" stroke="#f43f5e" stroke-width="0.8" stroke-opacity="0.4" />
-          <text x="128" y="14" class="font-mono" font-size="9.5" font-weight="600" fill="#fb7185">Tag 01: Dynamic</text>
-
-          <!-- CRC16 Status -->
-          <rect x="233" width="123" height="20" rx="6" fill="#38bdf8" fill-opacity="0.12" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.4" />
-          <text x="241" y="14" class="font-mono" font-size="9.5" font-weight="600" fill="#38bdf8">CRC16: 0xD78F [OK]</text>
+        <!-- Status Bottom Bar -->
+        <g transform="translate(0, 92)">
+          <rect width="360" height="18" rx="5" fill="#38bdf8" fill-opacity="0.12" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.3" />
+          <text x="8" y="13" class="font-mono" font-size="9" font-weight="600" fill="#7dd3fc">100% COMPLIANT WITH BOT &amp; EMVCo STANDARDS</text>
         </g>
       </g>
     </g>
