@@ -2,7 +2,7 @@
   "name": "promptparse-mod",
   "version": "1.6.0",
   "description": "All-in-one JS library for PromptPay & EMVCo QR Codes (MOD)",
-  "author": "Maythiwat Chomchuen <maythiwat.chom@gmail.com>",
+  "author": "korarit <korarit.sthg@gmail.com>",
   "license": "MIT",
   "keywords": [
     "emvco",
