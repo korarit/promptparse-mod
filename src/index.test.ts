@@ -99,6 +99,45 @@ test('Generate Bill Payment with Ref.3', () => {
   )
 })
 
+test('Generate Bill Payment with dynamic and merchantName (Tag 59)', () => {
+  expect(
+    generate.billPayment({
+      billerId: '010753700088201',
+      ref1: '16448929330994000001',
+      ref2: 'THETBANTAMBONMAECHAN',
+      ref3: '001',
+      merchantName: 'เป๋าตุง',
+      dynamic: true,
+    }),
+  ).toBe(
+    '00020101021230870016A00000067701011201150107537000882010220164489293309940000010320THETBANTAMBONMAECHAN53037645802TH5907เป๋าตุง620707030016304C30B',
+  )
+})
+
+test('Generate Bill Payment with dynamic: false (explicit static)', () => {
+  expect(
+    generate.billPayment({
+      billerId: '010753700088201',
+      ref1: '16448929330994000001',
+      amount: 100,
+      dynamic: false,
+    }),
+  ).toContain('000201010211')
+})
+
+test('Generate Bill Payment with merchantName and amount', () => {
+  expect(
+    generate.billPayment({
+      billerId: '010753700088201',
+      amount: 150.5,
+      ref1: '16448929330994000001',
+      merchantName: 'เป๋าตุง',
+    }),
+  ).toBe(
+    '00020101021230630016A000000677010112011501075370008820102201644892933099400000153037645802TH5406150.505907เป๋าตุง63049507',
+  )
+})
+
 test('Generate BOT Barcode', () => {
   expect(
     generate.botBarcode({
@@ -177,9 +216,7 @@ test('Convert BOT Barcode to Bill Payment (Invalid, data loss)', () => {
 
 test('Validate AnyID (MSISDN, no amount)', () => {
   expect(
-    validate.anyId(
-      generate.anyId({ type: 'MSISDN', target: '0812223333' }),
-    ),
+    validate.anyId(generate.anyId({ type: 'MSISDN', target: '0812223333' })),
   ).toEqual({ type: 'MSISDN', target: '0812223333' })
 })
 
@@ -193,9 +230,7 @@ test('Validate AnyID (MSISDN, with amount)', () => {
 
 test('Validate AnyID (NATID)', () => {
   expect(
-    validate.anyId(
-      generate.anyId({ type: 'NATID', target: '1234567890123' }),
-    ),
+    validate.anyId(generate.anyId({ type: 'NATID', target: '1234567890123' })),
   ).toEqual({ type: 'NATID', target: '1234567890123' })
 })
 
@@ -241,4 +276,27 @@ test('Validate Bill Payment (Invalid, AnyID payload)', () => {
       generate.anyId({ type: 'MSISDN', target: '0812223333' }),
     ),
   ).toBeFalsy()
+})
+
+test('Validate Bill Payment with merchantName and dynamic', () => {
+  const payload =
+    '00020101021230870016A00000067701011201150107537000882010220164489293309940000010320THETBANTAMBONMAECHAN53037645802TH5907เป๋าตุง620707030016304C30B'
+
+  expect(validate.billPayment(payload)).toEqual({
+    billerId: '010753700088201',
+    ref1: '16448929330994000001',
+    ref2: 'THETBANTAMBONMAECHAN',
+    ref3: '001',
+    merchantName: 'เป๋าตุง',
+  })
+})
+
+test('Parse payload (strict) with UTF-8 Thai characters and valid checksum', () => {
+  const payload =
+    '00020101021230870016A00000067701011201150107537000882010220164489293309940000010320THETBANTAMBONMAECHAN53037645802TH5907เป๋าตุง620707030016304C30B'
+
+  const parsed = parse(payload, true)
+  expect(parsed).toBeTruthy()
+  expect(parsed?.getTagValue('59')).toBe('เป๋าตุง')
+  expect(parsed?.validate('63')).toBe(true)
 })

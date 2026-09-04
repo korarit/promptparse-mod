@@ -14,7 +14,12 @@ export function billPayment(payload: string) {
   const billerId = ppqr?.getTagValue('30', '01')
   const ref1 = ppqr?.getTagValue('30', '02')
 
-  if (aidType !== '01' || tag30Aid !== 'A000000677010112' || !billerId || !ref1) {
+  if (
+    aidType !== '01' ||
+    tag30Aid !== 'A000000677010112' ||
+    !billerId ||
+    !ref1
+  ) {
     return null
   }
 
@@ -23,6 +28,7 @@ export function billPayment(payload: string) {
 
   const amountStr = ppqr?.getTagValue('54')
   const amount = amountStr !== undefined ? parseFloat(amountStr) : undefined
+  const merchantName = ppqr?.getTagValue('59')
 
   return {
     billerId,
@@ -30,5 +36,6 @@ export function billPayment(payload: string) {
     ...(ref2 !== undefined && { ref2 }),
     ...(ref3 !== undefined && { ref3 }),
     ...(amount !== undefined && { amount }),
+    ...(merchantName !== undefined && { merchantName }),
   }
 }

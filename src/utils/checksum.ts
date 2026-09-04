@@ -34,8 +34,9 @@ const TABLE = [
 ]
 
 export function crc16xmodem(data: string, crc = 0x0) {
-  for (const i of data) {
-    const b = i.charCodeAt(0)
+  const bytes = new TextEncoder().encode(data)
+  for (let i = 0; i < bytes.length; i++) {
+    const b = bytes[i]
     const n = (b ^ (crc >> 8)) & 0xff
     crc = TABLE[n] ^ (crc << 8)
   }
